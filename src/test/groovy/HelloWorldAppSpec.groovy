@@ -17,6 +17,7 @@ class HelloWorldAppSpec extends Specification {
     }
 
     def "canary"() {
+        HelloWorldApp.main()
         expect:
         true
     }

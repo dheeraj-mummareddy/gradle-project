@@ -14,6 +14,9 @@ cache:
 script:
   - ./gradlew clean build -PreleaseType=$RELEASE_TYPE
 
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
 # use latest java version available instead of travis default
 addons:
   apt:
